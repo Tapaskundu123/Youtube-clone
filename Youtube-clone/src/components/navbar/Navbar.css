@@ -1,0 +1,105 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-img {
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  height: 35px;
+  width: 100%;
+  padding-left: 45px;
+  padding-right: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.search-logo {
+  position: absolute;
+  left: 15px;
+  height: 20px;
+}
+
+/* ✅ Mobile & Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .nav-left,
+  .nav-middle,
+  .nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-middle {
+    justify-content: center;
+  }
+
+  .nav-img {
+    height: 25px;
+  }
+
+  .search-input {
+    height: 30px;
+    font-size: 14px;
+    padding-left: 35px;
+  }
+
+  .search-logo {
+    height: 16px;
+    left: 10px;
+  }
+
+  /* ✅ Hide everything except logo, search icon, profile icon */
+  .navbar:not(.search-active) .nav-left img:not(.logo),
+  .navbar:not(.search-active) .nav-right img:not(.profile-icon),
+  .navbar:not(.search-active) .search-container {
+    display: none;
+  }
+
+  /* ✅ When search is active, show only search input and profile */
+  .navbar.search-active .nav-left,
+  .navbar.search-active .nav-right img:not(.profile-icon),
+  .navbar.search-active .nav-middle .mobile-search-icon {
+    display: none;
+  }
+
+  .navbar.search-active .search-container {
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+  }
+}

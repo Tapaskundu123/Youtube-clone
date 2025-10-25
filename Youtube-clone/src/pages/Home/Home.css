@@ -1,0 +1,9 @@
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.home-div {
+  display: flex;
+  height: 100%;
+  gap: 40px;
+}
