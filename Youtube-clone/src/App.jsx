@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Video from './pages/Video/Video'
-import Navbar from './components/navbar/navbar'
+import Navbar from './components/navbar/Navbar'
 
 const App = () => {
   return (
@@ -18,4 +18,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

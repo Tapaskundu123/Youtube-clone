@@ -1,5 +1,3 @@
-const apiData= 'AIzaSyApcVkPKKOT9Qn5i7KY92iZJY5iccq7kgA';
-
 
   function CountViews(views) {
    views = Number(views); // Convert to number
